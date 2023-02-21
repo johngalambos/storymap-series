@@ -1328,7 +1328,7 @@ define(["lib-build/css!lib-app/bootstrap/css/bootstrap.min",
 				}) : [];
 				var additionalGeocoders = [];
 				if (app.cfg.HELPER_SERVICES.geocode && app.cfg.HELPER_SERVICES.geocode.length) {
-					$.each(app.portal.helperServices.geocode, function (index, geocoder) {
+					$.each(app.cfg.HELPER_SERVICES.geocode, function (index, geocoder) {
 						if (geocoder.url && existingGeocoderUrls.indexOf(geocoder.url) < 0) {
 							additionalGeocoders.push(geocoder);
 						}
