@@ -193,9 +193,10 @@ define(["lib-build/css!./Footer",
 			
 			function init()
 			{
-				if ( ! $("body").hasClass("hasTouch") )
-					container.addClass("hasDesktopBtn");
-				else {
+				//always show the desktop buttons even on mobile devices
+				container.addClass("hasDesktopBtn");
+
+				if ($("body").hasClass("hasTouch") ) {
 					container.tooltip({
 						title: '<span class="footerTooltip">'
 								+ '<span class="glyphicon glyphicon-resize-horizontal" style="vertical-align: -2px;"></span>'
